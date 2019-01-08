@@ -1,3 +1,5 @@
+//En este archivo se pone en práctica el trabajo de Promesas...
+
 function writeLetter(){
     var letra = new Promise (function(resolve,reject){
         setTimeout(function(){

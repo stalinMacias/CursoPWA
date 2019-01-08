@@ -1,3 +1,5 @@
+//Primer acercamiento a las promesas...
+
 function sumarUno (numero){
 
     //Crear la promesa
