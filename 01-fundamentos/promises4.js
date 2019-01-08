@@ -1,15 +1,17 @@
 //En este archivo se pone en práctica el metodo all de las promesas.
-//Promise.all
+//Promise.all()
+/*
+    *Devuelve una promesa que termina correctamente cuando todas las promesas en el argumento iterable
+    *han sido concluidas con éxito, o bien rechaza la petición con el mótivo pasado por la primer promesa
+    *que es rechazada.
 
+*/
 
 function sumaPares(num1,num2){
     //Si el metodo devuelve una promesa, no hay necesidad de crear una variable, devoverla directamente...!
     return new Promise((resolve,reject) =>{
-        if((num1  % 2 != 0) || (num2 % 2 != 0)){
-            reject("Los numeros deben ser pares");
-        }else{
-            resolve(num1+num2);
-        }
+        if((num1  % 2 != 0) || (num2 % 2 != 0)) reject("Los numeros deben ser pares");
+        else resolve(num1+num2);
     }); //Cierre promesa
 
 } 

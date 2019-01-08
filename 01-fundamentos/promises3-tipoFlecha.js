@@ -1,5 +1,11 @@
 //Las funciones escritas en el archivo promises3.js serán reescritas en el formato de ES6 funciones tipo flecha...
-
+//Funciones tipo flecha
+/*  Sintaxis de una función tipo flecha...
+    (argumento,argumento)=>{
+        //Codigo a ejecutar
+        return ...
+    }
+*/
 function writeLetter(){
     var letra = new Promise((resolve,reject)=>{
         setTimeout(()=>{resolve(".com");},1000);
