@@ -7,8 +7,12 @@
 
 //Un fetch sirve para obtener información de un sitio web distinto al nuestro...
 
+//UNA PETICIÓN FETCH- GET SIRVE PARA TRAER INFORMACIÓN DE UNA API
+
+//PETICION GET
+
 fetch('https://reqres.in/api/users')
-.then(resp =>resp.json()   //convertir la respuesta que obtiene el fetch y parsearla a un archivo tipo json para poder leer la información
+.then(resp =>resp.json()    //convertir la respuesta que obtiene el fetch y parsearla a un archivo tipo json para poder leer la información
 ).then(respObj =>{
-    console.log(respObj)
+    console.log(respObj)    //Mostrar en la consola el objeto obtenido ya parseado a tipo json...
 });
