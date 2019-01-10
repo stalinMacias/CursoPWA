@@ -4,7 +4,7 @@
 
 //Postear información por medio de fetch....
 
-//UNA PETICIÓN FETCH- POST SIRVE PARA POSTEAR INFORMACIÓN A UNA API
+//UNA PETICIÓN FETCH- POST SIRVE PARA POSTEAR INFORMACIÓN
 
 //Parametros del fetch:
 
@@ -56,3 +56,19 @@ fetch('https://reqres.in/api/users',{
     console.log("Error en la peticion");
     console.log(error);
 })
+
+
+let autor = {
+    nombre : "Stalin",
+    edad : 22
+}
+
+fetch('https://reqres.in/api/users',{
+    method: 'POST',
+    body: JSON.stringify(autor),
+    headers:{
+        'Content-Type': 'application/json'
+    }
+}).then(resp => resp.json())
+.then(resp => console.log(resp))
+.catch(error => console.log(error))
