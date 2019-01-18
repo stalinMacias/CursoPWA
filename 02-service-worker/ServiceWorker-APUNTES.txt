@@ -1,0 +1,26 @@
+El service worker es un simple archivo de JS que esta pendiente de sucesos, por ende, contiene muchos eventListener
+Los eventos de los que esta pendiente el service worker pueden ser:
+    *Install            -> Cuando se este instalando el service worker
+    *Activate           -> Cuando se esta activando el service worker
+    *Push               -> Cuando se recibe una notificacion Push
+    *Fetch              -> Cuando se realiza una peticion Fetch
+    *Sync               -> Cuando se va a realizar una sincronización, es decir, que volvió de estar offline a online
+    *Message            -> Cuando se recibe un mensaje
+
+
+    El service worker se ejecuta en su propio hilo de manera background, se ejecuta de manera independiente a la aplicación.
+    Aunque se cierre el navegador, el service worker sigue escuchando eventos tales como:
+            *PUSH NOTIFICATION
+            *CONEXION OFFLINE - ONLINE
+            *MANEJO DEL CACHE
+
+    El service worker debe correr en un protocolo https para que funcione, de lo contrario, no funcionará.
+
+
+    El service worker se installa en el equipo haciendo uso de la siguiente linea de codigo :
+                    navigator.serviceWorker.register("/nombreServiceWoker.js")
+                                                    *por convención, el archivo se llama: sw.js o serviceWorker.js
+
+
+
+
